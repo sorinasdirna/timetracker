@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet">
+    <title>Time Tracker - Login</title>
+</head>
+<body>    
+    <div class="login">
+        <div class="container">
+            <div class="login_logo">
+                <img src="../images/timetrack_logo.png" alt="Time Track Logo">
+            </div>
+            <div class="login_form">
+                <ul id="loginErrors" class="errors"></ul>
+                <form id="loginForm" class="form form--login">
+                    <div class="form_item">
+                        <label for="usernameInput" class="form_label"><i class="fa fa-user"></i>Enter your username</label>
+                        <input id="usernameInput" type="text" class="form_input form_input--username">
+                    </div>
+                    <div class="form_item">
+                        <label for="passwordInput" class="form_label"><i class="fa fa-unlock-alt"></i>Enter your password</label>
+                        <input id="passwordInput" type="password" class="form_input form_input--password">
+                    </div>
+                    <button type="submit" class="button button--login" id="button-login">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- script js -->
+    <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+:root {
+    --light_color: #fff;
+    --dark_color: #000;
+    --grey_color: #E6E6E6;
+    --lightgrey_color: #f2f2f2;
+    --text_color: #333;
+    --brand_color: #078FC9;
+    --alt_brand_color: #F6B221;
+    --warning_color: #ec6a4c;
+    --success_color: #33ae10;
+    --error_color: #FF0000;
+}
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset,
+legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--light_color);
+    color: var(--text_color);
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* HEADERS */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-bottom: 1rem; 
+    line-height: 1.2;
+}
+h1 {
+    font-size: 40px;
+    font-size: 4rem; 
+}
+h2 {
+    font-size: 36px;
+    font-size: 3.6rem; 
+}
+h3 {
+    font-size: 30px;
+    font-size: 3rem; 
+}
+h4 {
+    font-size: 24px;
+    font-size: 2.4rem; 
+}
+h5 {
+    font-size: 20px;
+    font-size: 2rem; 
+}
+h6 {
+    font-size: 16px;
+    font-size: 1.6rem; 
+}
+li, p {
+    font-size: 14px;
+    font-size: 1.4rem; 
+}
+ul {
+    list-style: none;
+}
+a {
+    color: var(--brand_color);
+    transition: 0.2s ease-in-out;
+}
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+input, select, textarea {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 0;
+    color: var(--text_color);
+    background-color: var(--grey_color);
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    transition: 300ms;
+}
+input:focus, select:focus, textarea:focus {
+    background-color: var(--light_color);
+}
+::placeholder { 
+    opacity: .5; 
+}
+:-ms-input-placeholder { 
+    opacity: .5; 
+}
+::-ms-input-placeholder {
+    opacity: .5; 
+}
+.button {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+    background-color: var(--brand_color);
+    color: var(--light_color);
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+} 
+.button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 1;
+    -webkit-transform: translate(-105%,0);
+    transform: translate(-105%,0);
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.25);
+}
+.button:hover::before {
+    opacity: 0;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+}
+.button--delete {
+    background-color: var(--alt_brand_color);
+}
+/* login: start */
+.login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login .container {
+    padding: 40px;
+    display: inline-block;
+    text-align: left;
+    background-color: var(--lightgrey_color);
+    box-shadow: 1px 5px 15px -5px #000;
+    left: 0;
+    right: 0;
+    max-width: 400px;
+    margin: 50px auto;
+}
+.login_logo {
+    margin-bottom: 30px;
+}
+.login_logo img {
+    width: 100%;
+}
+.form_item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.form_label {
+    color: var(--brand_color);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.login input {
+    padding: 13px 20px 13px 65px;
+}
+.login label i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    line-height: 45px;
+    background: var(--brand_color);
+    color: var(--lightgrey_color);
+    text-align: center;
+    font-size: 24px;
+}
+.login .button {
+    width: 100%;
+}
+/* login: end */
+
+/* index: start */
+.header {
+    background-color: var(--lightgrey_color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo {
+    max-width: 33.333%;
+}
+.header_logo img {
+    width: 100%;
+    max-width: 200px;
+}
+.header_profile-username {
+    color: var(--brand_color);
+    font-weight: bold;
+}
+.main .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.sidebar {
+    background-color: var(--lightgrey_color);
+    padding: 20px;
+    margin: 20px 20px 20px 0;
+    flex: 1;
+}
+.tasks {
+    background-color: var(--lightgrey_color);
+    padding: 20px;
+    margin: 20px;
+    flex: 2;
+}
+.task {
+    background: #fff;
+    padding: 20px;
+}
+.task ~ .task {
+    margin-top: 20px;
+}
+.task .form_label {
+    display: block;
+}
+.task .form_label i {
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 45px;
+    line-height: 45px;
+    background: var(--brand_color);
+    color: var(--lightgrey_color);
+    text-align: center;
+    font-size: 24px;
+}
+.task .form_input {
+    display: inline-block;
+    max-width: 200px;
+    padding: 13px 20px 13px 65px;
+}
+.task_worklog {
+    display: inline-block;
+}
+.task_description {
+    margin-bottom: 10px;
+}
+.edit {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.js--edit .edit {
+    opacity: 1;
+    visibility: visible;
+}
+.edit_bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+}
+.js--edit .edit_bg {
+    opacity: 0.8;
+    visibility: visible;
+}
+.edit_container {
+    position: relative;
+    background: #FFF;
+    padding: 25px;
+    width: auto;
+    max-width: 400px;
+    margin: 20px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+    z-index: 9;
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 100%;
+}
+.js--edit .edit_container {
+    opacity: 1;
+    transform: scale(1);
+}
+.js--edit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.edit_container .button--close {
+    color: var(--text_color);
+    background: var(--light_color);
+    vertical-align: middle;
+}
+/* index: end */
+.js--alert {
+    color: var(--warning_color);
+}
+.errors {
+    color: var(--error_color);
+    margin-bottom: 15px;
+}
+@media screen and (max-width: 900px) {
+    .tasks,
+    .sidebar {
+        flex: auto;
+        width: 100%;
+        margin: 20px;
+    }
+    .task_worklog {
+        display: block;
+        margin-top: 10px;;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .task .form_input {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}

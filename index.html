@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet">
+    <title>Time Tracker</title>
+</head>
+<body>    
+    <div class="header">
+        <div class="header_logo">
+            <img src="../images/timetrack_logo.png" alt="Time Track Logo">
+        </div>
+        <div class="header_profile">
+            <i class="fa fa-user"></i>
+            Hello, <span id="username" class="header_profile-username"></span>
+        </div>
+    </div>
+    <main class="main">
+        <div class="container">
+            <aside class="sidebar"> 
+                <h4>Add new task:</h4>
+                <div class="task_form">
+                    <ul id="taskErrors" class="errors"></ul>
+                    <form id="taskForm" class="form form--task">
+                        <div class="form_item">
+                            <label for="nameInput" class="form_label">Task name</label>
+                            <input id="nameInput" type="text" class="form_input form_input--name">
+                        </div>
+                        <div class="form_item">
+                            <label for="descriptionInput" class="form_label">Task description</label>
+                            <textarea id="descriptionInput" class="form_input form_input--description"></textarea>
+                        </div>
+                        <div class="form_item">
+                            <label for="estimatedTimeInput" class="form_label">Estimated time</label>
+                            <input id="estimatedTimeInput" type="text" class="form_input form_input--estimate" size="10" maxlength="10" placeholder="HH:MM">
+                        </div>
+                        <div class="form_item">
+                            <label for="betaDateInput" class="form_label">Beta date</label>
+                            <input id="betaDateInput" type="text" class="form_input form_input--date" size="10" maxlength="10" placeholder="MM/DD/YYYY">
+                        </div>
+                        <button type="submit" class="button button--task" id="buttonCreateTask">Submit</button>
+                    </form>
+                </div>
+            </aside>
+            <section class="tasks">
+                <h1>Your tasks:</h1>
+                <ul id="taskErrors" class="errors"></ul>
+                <div id="taskList" class="task_list">
+                    
+                   <!-- <div class="task">
+                        <form id="addTimeForm" class="form form--add-time">
+                            <div class="form_item">
+                                <label for="addTimeTnput" class="form_label"><i class="fa fa-clock-o"></i>Add time</label>
+                                <input id="addTimeTnput" type="text" class="form_input form_input--add-time">
+                                <button type="submit" class="button button--add" id="button-add-time">Add</button>
+                            </div>
+                        </form>
+                        <div class="task_entries js--alert">26h</div>
+                        <h4 class="task_name">Update header and footer</h4>
+                        <p class="task_description">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+                        <h6 class="task_estimate">Estimated time: <strong>24h</strong></h6>
+                        <h6 class="task_date">Beta date: <strong>May, 2020</strong></h6>
+                    </div>
+
+                    <div class="task">
+                        <form id="addTimeForm" class="form form--add-time">
+                            <div class="form_item">
+                                <label for="addTimeTnput" class="form_label"><i class="fa fa-clock-o"></i>Add time</label>
+                                <input id="addTimeTnput" type="text" class="form_input form_input--add-time">
+                                <button type="submit" class="button button--add" id="button-add-time">Add</button>
+                            </div>
+                        </form>
+                        <div class="task_entries js--alert">26h</div>
+                        <h4 class="task_name">Update header and footer</h4>
+                        <p class="task_description">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+                        <h6 class="task_estimate">Estimated time: <strong>24h</strong></h6>
+                        <h6 class="task_date">Beta date: <strong>May, 2020</strong></h6>
+                    </div>-->
+
+                </div>
+            </section>
+            <section class="edit"> 
+                <div class="edit_bg"></div>
+                <div class="edit_container">
+                    <h4>Edit task:</h4>
+                    <div class="task_form-edit">
+                        <ul id="taskEditErrors" class="errors"></ul>
+                        <form id="taskFormEdit" class="form form--task-edit">
+                            <div class="form_item">
+                                <label for="nameInputEdit" class="form_label">Task name</label>
+                                <input id="nameInputEdit" type="text" class="form_input form_input--name">
+                            </div>
+                            <div class="form_item">
+                                <label for="descriptionInputEdit" class="form_label">Task description</label>
+                                <textarea id="descriptionInputEdit" class="form_input form_input--description"></textarea>
+                            </div>
+                            <div class="form_item">
+                                <label for="estimatedTimeInputEdit" class="form_label">Estimated time</label>
+                                <input id="estimatedTimeInputEdit" type="text" class="form_input form_input--estimate" size="10" maxlength="10" placeholder="HH:MM">
+                            </div>
+                            <div class="form_item">
+                                <label for="betaDateInputEdit" class="form_label">Beta date</label>
+                                <input id="betaDateInputEdit" type="text" class="form_input form_input--date" size="10" maxlength="10" placeholder="MM/DD/YYYY">
+                            </div>
+                            <div class="form_item">
+                                <label for="worklogInputEdit" class="form_label">Worklog</label>
+                                <input id="worklogInputEdit" type="text" class="form_input form_input--worklog" size="10" maxlength="10" placeholder="HH:MM">
+                            </div>
+                            <input id="idInputEdit" type="hidden" class="form_input form_input--name">
+                            <button id="buttonEditTask" type="submit" class="button button--edit" id="button-edit">Submit</button>
+                            <a id="buttonCloseEdit" href="#" class="button button--close">Close</a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- script js -->
+    <script src="js/task.js"></script>
+</body>
+
+</html>
